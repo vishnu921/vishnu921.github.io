@@ -5,7 +5,7 @@ import self from '../../assets/self.jpg'
 
 function Home() {
   return (
-    <div className="home">
+    <section className="home">
       <div className="container home-container">
         <h5>Hello I'm</h5>
         <h1>Bishnu Amola</h1>
@@ -21,7 +21,7 @@ function Home() {
 
         <HomeSocials />
       </div>
-    </div>
+    </section>
   )
 }
 
