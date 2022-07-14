@@ -9,6 +9,37 @@
   text-decoration: none;
 }
 
+/* :root {
+  --color-bg: #2a2a2a;
+  --color-bg-variant: #565656;
+  --color-primary: #fba92c;
+  --color-primary-variant: rgb(251, 169, 44, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  --transition: all 400ms ease;
+} */
+
+/* :root {
+  --color-bg: #373e98;
+  --color-bg-variant: #1f1f38;
+  --color-primary: #fee36e;
+  --color-primary-variant: #ceb92c;
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  --transition: all 400ms ease;
+} */
+
+
 :root {
   --color-bg: #1f1f38;
   --color-bg-variant: #2c2c6c;
