@@ -21,8 +21,8 @@ footer a {
 .footer-socials a {
     background: var(--color-bg);
     color: var(--color-white);
-    padding: 0.3rem;
-    border-radius: 0.5rem;
+    padding: 0.4rem;
+    border-radius: 50%;
     display: flex;
     border: 1px solid transparent;
 }
@@ -37,4 +37,17 @@ footer a {
     display: flex;
     align-items: center;
     color: var(--color-bg);
+}
+
+
+@media screen and (max-width: 576px) {
+    footer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-copyright {
+        margin-top: 0.5rem;
+    }
 }
