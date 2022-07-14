@@ -1,0 +1,40 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-primary);
+    padding: 0.5rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+}
+
+footer a {
+    color: var(--color-bg);
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-socials a {
+    background: var(--color-bg);
+    color: var(--color-white);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    border: 1px solid transparent;
+}
+
+.footer-socials a:hover {
+    background: transparent;
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    color: var(--color-bg);
+}
