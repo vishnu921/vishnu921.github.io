@@ -1,9 +1,15 @@
 import React from 'react'
 import './footer.css'
+import { useLocation } from "react-router-dom";
 import {BsLinkedin, BsInstagram} from 'react-icons/bs'
 import {FaGithub, FaTwitter} from 'react-icons/fa'
 
 function Footer() {
+
+  const { pathname } = useLocation()
+
+  if (pathname === '/') return null
+
   return (
     <footer>
       <div className="footer-copyright">

@@ -1,7 +1,7 @@
 import React from 'react'
 import './home.css'
 import HomeSocials from './HomeSocials'
-import self from '../../assets/self.jpg'
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -12,13 +12,8 @@ function Home() {
         <h5 className="text-light">Fullstack Developer</h5>
 
         <div className='cta'>
-          <a href="#contact" className='btn btn-primary'>Contact Me</a>
+        <Link to='/contact' className='btn btn-primary'>Contact Me</Link>
         </div>
-
-        <div className="me">
-          {/* <img src={self} alt="me" /> */}
-        </div>
-
         <HomeSocials />
       </div>
     </section>
