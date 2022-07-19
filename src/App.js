@@ -11,19 +11,22 @@ import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
+import background from './assets/bg.jpg'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${background})` }}>
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} /> 
-        <Route path="about" element={<About />} /> 
-        <Route path="skills" element={<Skills />} /> 
-        <Route path="projects" element={<Projects />} /> 
-        <Route path="contact" element={<Contact />} /> 
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} /> 
+          <Route path="about" element={<About />} /> 
+          <Route path="skills" element={<Skills />} /> 
+          <Route path="projects" element={<Projects />} /> 
+          <Route path="contact" element={<Contact />} /> 
+        </Routes>
+      </main>
       <Footer />
     </Router>
     </div>

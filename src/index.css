@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 
-/* :root {
+:root {
   --color-bg: #2a2a2a;
   --color-bg-variant: #565656;
   --color-bg-variant-2: #313131;
@@ -24,7 +24,7 @@
   --container-width-sm: 90%;
 
   --transition: all 400ms ease;
-} */
+}
 
 /* :root {
   --color-bg: #373e98;
@@ -42,7 +42,7 @@
 } */
 
 
-:root {
+/* :root {
   --color-bg: #1f1f38;
   --color-bg-variant: #2c2c6c;
   --color-bg-variant-2: #262647;
@@ -56,7 +56,7 @@
   --container-width-sm: 90%;
 
   --transition: all 400ms ease;
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -67,6 +67,7 @@ html {
 }
 
 body {
+  height: 100vh;
   margin: 0;
   font-family: 'Poppins', Open Sans, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -74,6 +75,7 @@ body {
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
+  overflow: hidden;
 }
 
 .container {
@@ -94,18 +96,34 @@ h1 {
 }
 
 section {
-  margin-top: 8rem;
+  height: calc(100% - 75px);
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  overflow: auto;
+  display: flex !important;
+  align-items: center !important;
 }
 
-section > h2, section > h5 {
+.inner-section {
+  width: 100%;
+  max-height: 100%;
+  padding: 3rem 1rem;
+}
+
+.inner-section > h2, .inner-section > h5 {
   text-align: center;
   color: var(--color-light);
 }
 
-section > h2 {
+.inner-section > h2 {
   color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 3rem;
   font-size: 1.75rem;
+  letter-spacing: 4px;
 }
 
 .text-light {
@@ -157,18 +175,18 @@ img {
   .container {
     width: var(--container-width-md);
   }
-
-  section {
-    margin-top: 6rem;
-  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
   .container {
     width: var(--container-width-sm);
   }
 
-  section > h2 {
+  .inner-section > h2 {
     margin-bottom: 2rem;
+  }
+  
+  section {
+    height: calc(100% - 60px);
   }
 }

@@ -51,26 +51,28 @@ const data = [
 function Projects() {
   return (
     <section>
-      <h5>Checkout My Recent Work</h5>
-      <h2>Projects</h2>
+    <div className="inner-section">
+        <h5>Checkout My Recent Work</h5>
+        <h2>Projects</h2>
 
-      <div className="container projects-container">
-        {
-          data.map(({id, image, title, github, demo}) => {
-            return (
-              <article key={id} className="project-item">
-                <div className="project-item-image">
-                  <img src={image} alt={title} />
-                </div>
-                <h3>{title}</h3>
-                <div className="project-item-cta">
-                  <a href={github} className='btn' target="_blank" rel="noreferrer">Github</a>
-                  <a href={demo} className='btn btn-primary' target="_blank" rel="noreferrer">Live Demo</a>
-                </div>
-              </article>
-            )
-          })
-        }
+        <div className="container projects-container">
+          {
+            data.map(({id, image, title, github, demo}) => {
+              return (
+                <article key={id} className="project-item">
+                  <div className="project-item-image">
+                    <img src={image} alt={title} />
+                  </div>
+                  <h3>{title}</h3>
+                  <div className="project-item-cta">
+                    <a href={github} className='btn' target="_blank" rel="noreferrer">Github</a>
+                    <a href={demo} className='btn btn-primary' target="_blank" rel="noreferrer">Live Demo</a>
+                  </div>
+                </article>
+              )
+            })
+          }
+        </div>
       </div>
     </section>
   )
