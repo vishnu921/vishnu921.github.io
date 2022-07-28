@@ -22,6 +22,8 @@
 
 .contact-option > h5 {
     color: var(--color-primary);
+    font-weight: 500 !important;
+    letter-spacing: 0.5px;
 }
 
 .contact-option:hover {

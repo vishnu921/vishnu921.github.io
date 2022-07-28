@@ -13,7 +13,7 @@
 :root {
   --color-bg: #2a2a2a;
   --color-bg-variant: #565656;
-  --color-bg-variant-2: #313131;
+  --color-bg-variant-2: rgba(36,42,45,0.7);
   --color-primary: #fba92c;
   --color-primary-variant: rgb(251, 169, 44, 0.4);
   --color-white: #fff;

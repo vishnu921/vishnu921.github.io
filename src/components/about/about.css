@@ -7,34 +7,31 @@
 .about-me {
     width: 100%;
     aspect-ratio: 1/1;
-    border-radius: 2rem;
+    border-radius: 50%;
     background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
     display: grid;
     place-items: center;
+    overflow: hidden;
 }
 
 .about-me-image {
-    border-radius: 2rem;
+    border-radius: 1rem;
     overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
-}
-
-.about-me-image:hover {
-    transform: rotate(0deg);
+    position: relative;
+    top: 1rem;
 }
 
 .about-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .about-card {
     background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
     text-align: center;
     transition: var(--transition);
 }
@@ -47,7 +44,7 @@
 
 .about-icon {
     color: var(--color-primary);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
@@ -56,16 +53,27 @@
 }
 
 .about-card small {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--color-light);
 }
 
 .about-content p {
+    text-align: left;
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
 }
 
-@media screen and (max-width: 1024px) {
+
+/* -------------- Media Queries --------------- */
+
+@media screen and (max-width: 1200px) {
+
+    .about-content p {
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
     .about-container {
         grid-template-columns: 1fr;
         gap: 0;
@@ -75,28 +83,28 @@
         width: 50%;
         margin: 2rem auto 4rem;
     }
-
-    .about-content p {
-        margin: 1rem 0 1.5rem;
-    }
 }
-  
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 768px) {
     .about-me {
         width: 65%;
         margin: 0 auto 3rem;
     }
 
+    .about-me-image {
+        top: 0.5rem;
+    }
+    
     .about-cards {
-        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
     .about-content {
         text-align: center;
+        padding: 0.5rem;
     }
 
     .about-content p {
-        margin: 1.5rem 0;
+        margin: 2rem 0;
     }
 }
