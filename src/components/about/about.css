@@ -28,9 +28,9 @@
 }
 
 .about-card {
-    background: var(--color-bg-variant);
+    background: var(--color-bg-variant-2);
     border: 1px solid transparent;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     padding: 2rem 1rem;
     text-align: center;
     transition: var(--transition);
@@ -94,7 +94,7 @@
     .about-me-image {
         top: 0.5rem;
     }
-    
+
     .about-cards {
         gap: 1rem;
     }

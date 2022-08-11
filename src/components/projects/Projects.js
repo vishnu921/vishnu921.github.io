@@ -8,49 +8,25 @@ const data = [
     id: 1,
     image: IMG2,
     title: 'Facebook Clone',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti saepe voluptatum doloribus sapiente accusantium cupiditate autem perspiciatis! Eveniet, aspernatur.',
-    github: 'https://github.com/vishnu921',
+    description: 'This clone of Facebook is a single page application built using ReactJS in which use can sign-in using their googleaccounts. User can write a post and the feed would change in real-time for all the users. The back-end of the app is maintained using the Firestore database',
+    github: 'https://github.com/vishnu921/facebook-clone',
     demo: 'https://fb-clone-b81f0.web.app/'
   },
   {
     id: 2,
     image: IMG1,
     title: 'Realtime Chat App',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti saepe voluptatum doloribus sapiente accusantium cupiditate autem perspiciatis! Eveniet, aspernatur.',
-    github: 'https://github.com/vishnu921',
-    demo: '#'
+    description: 'Multiple users can join a chat room by each entering a unique username on website load. A notification is sent to all users when a user joins or leaves the chatroom. Users can type chat messages to the chat room',
+    github: 'https://github.com/vishnu921/chat-app-project',
+    demo: 'https://github.com/vishnu921'
   },
   {
     id: 3,
     image: IMG2,
     title: 'TODO Application',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti saepe voluptatum doloribus sapiente accusantium cupiditate autem perspiciatis! Eveniet, aspernatur.',
-    github: 'https://github.com/vishnu921',
+    description: 'Add and organize your daily tasks with easy interface. The Todo list persist event after tab is closed or reloaded and you can also undo deleted tasks from last save. The CRUD operations are implemented using Web Storage API and JavaScript',
+    github: 'https://github.com/vishnu921/Todo-application',
     demo: 'https://vishnu921.github.io/Todo-application/'
-  },
-  {
-    id: 4,
-    image: IMG2,
-    title: 'Facebook Clone',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti saepe voluptatum doloribus sapiente accusantium cupiditate autem perspiciatis! Eveniet, aspernatur.',
-    github: 'https://github.com/vishnu921',
-    demo: 'https://fb-clone-b81f0.web.app/'
-  },
-  {
-    id: 5,
-    image: IMG2,
-    title: 'Facebook Clone',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti saepe voluptatum doloribus sapiente accusantium cupiditate autem perspiciatis! Eveniet, aspernatur.',
-    github: 'https://github.com/vishnu921',
-    demo: 'https://fb-clone-b81f0.web.app/'
-  },
-  {
-    id: 6,
-    image: IMG2,
-    title: 'Facebook Clone',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti saepe voluptatum doloribus sapiente accusantium cupiditate autem perspiciatis! Eveniet, aspernatur.',
-    github: 'https://github.com/vishnu921',
-    demo: 'https://fb-clone-b81f0.web.app/'
   }
 ]
 

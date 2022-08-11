@@ -1,87 +1,92 @@
 import React from 'react'
 import './skills.css'
-import {BsPatchCheckFill} from 'react-icons/bs'
+
+const data = [
+  {
+    id: 1,
+    name: "C++",
+    devicon: "devicon-cplusplus-plain"
+  },
+  {
+    id: 2,
+    name: "Python",
+    devicon: "devicon-python-plain"
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    devicon: "devicon-javascript-plain"
+  },
+  {
+    id: 4,
+    name: "HTML5",
+    devicon: "devicon-html5-plain"
+  },
+  {
+    id: 5,
+    name: "CSS",
+    devicon: "devicon-css3-plain"
+  },
+  {
+    id: 6,
+    name: "React",
+    devicon: "devicon-react-original"
+  },
+  {
+    id: 7,
+    name: "Nodejs",
+    devicon: "devicon-nodejs-plain"
+  },
+  {
+    id: 8,
+    name: "Express",
+    devicon: "devicon-express-original"
+  },
+  {
+    id: 9,
+    name: "MongoDB",
+    devicon: "devicon-mongodb-plain"
+  },
+  {
+    id: 10,
+    name: "MySql",
+    devicon: "devicon-mysql-plain"
+  },
+  {
+    id: 11,
+    name: "Bootstrap",
+    devicon: "devicon-bootstrap-plain"
+  },
+  {
+    id: 12,
+    name: "Tensorflow",
+    devicon: "devicon-tensorflow-original"
+  }
+]
 
 function Skills() {
   return (
     <section>
     <div className="inner-section">
+      <div className="section-header">
         <h5>What I'm best at</h5>
         <h2>Skills</h2>
+      </div>
 
-        <div className="container skills-container">
-          <div className="skills-frontend">
-            <h3>Frontend Development</h3>
-            <div className="skills-content">
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>HTML</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>CSS</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>JavaScript</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>Bootstrap</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>React</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div className="skills-backend">
-            <h3>Backend Development</h3>
-            <div className="skills-content">
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>Node JS</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>MongoDB</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>MySQL</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-              <article className="skill-details">
-                <BsPatchCheckFill className='skill-details-icon' />
-                <div>
-                  <h4>Python</h4>
-                  <small className="text-light">Experienced</small>
-                </div>
-              </article>
-            </div>
+        <div className="container">
+          <div className="skills-container">
+            {
+              data.map(({id, devicon, name}) => {
+                return (
+                  <div key={id} className="skill-card">
+                    <div className='skill-item'>
+                      <i className={devicon} />
+                      <p>{name}</p>
+                    </div>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </div>

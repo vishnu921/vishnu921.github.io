@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   letter-spacing: 8px;
   text-shadow: 0 0 4px hsla(0,0%,100%,.55),0 0 30px hsla(0,0%,100%,0),0 0 80px #fff;
@@ -193,6 +193,7 @@ img {
 @media screen and (max-width: 768px) {
   .container {
       width: 540px;
+      padding-bottom: 6rem;
   }
 }
 
