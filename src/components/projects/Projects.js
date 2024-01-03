@@ -4,7 +4,7 @@ import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../config/firebase';
 
 function Projects() {
-  const [projectList, setprojectList] = useState([]);
+  const [projectList, setProjectList] = useState([]);
   const projectsCollectionRef = collection(db, "projects");
 
   useEffect(() => {
@@ -12,7 +12,7 @@ function Projects() {
       try {
         const data = await getDocs(projectsCollectionRef);
         const filteredData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-        setprojectList(filteredData);
+        setProjectList(filteredData);
       } catch (err) {
         console.log(err);
       }
