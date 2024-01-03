@@ -1,70 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './skills.css'
-
-const data = [
-  {
-    id: 1,
-    name: "C++",
-    devicon: "devicon-cplusplus-plain"
-  },
-  {
-    id: 2,
-    name: "Python",
-    devicon: "devicon-python-plain"
-  },
-  {
-    id: 3,
-    name: "JavaScript",
-    devicon: "devicon-javascript-plain"
-  },
-  {
-    id: 4,
-    name: "HTML5",
-    devicon: "devicon-html5-plain"
-  },
-  {
-    id: 5,
-    name: "CSS",
-    devicon: "devicon-css3-plain"
-  },
-  {
-    id: 6,
-    name: "React",
-    devicon: "devicon-react-original"
-  },
-  {
-    id: 7,
-    name: "Nodejs",
-    devicon: "devicon-nodejs-plain"
-  },
-  {
-    id: 8,
-    name: "Express",
-    devicon: "devicon-express-original"
-  },
-  {
-    id: 9,
-    name: "MongoDB",
-    devicon: "devicon-mongodb-plain"
-  },
-  {
-    id: 10,
-    name: "MySql",
-    devicon: "devicon-mysql-plain"
-  },
-  {
-    id: 11,
-    name: "Bootstrap",
-    devicon: "devicon-bootstrap-plain"
-  },
-  {
-    id: 12,
-    name: "Tensorflow",
-    devicon: "devicon-tensorflow-original"
-  }
-]
+import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../../config/firebase';
 
 function Skills() {
+  const [skillList, setSkillList] = useState([])
+  const skillsCollectionRef = collection(db, "skills");
+
+  
+  useEffect(() => {
+    const getSkillList = async () => {
+      try {
+        const data = await getDocs(skillsCollectionRef);
+        const filteredData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+        setSkillList(filteredData);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
+    getSkillList();
+  })
+
   return (
     <section>
     <div className="inner-section">
@@ -76,7 +33,7 @@ function Skills() {
         <div className="container">
           <div className="skills-container">
             {
-              data.map(({id, devicon, name}) => {
+              skillList.map(({id, devicon, name}) => {
                 return (
                   <div key={id} className="skill-card">
                     <div className='skill-item'>
